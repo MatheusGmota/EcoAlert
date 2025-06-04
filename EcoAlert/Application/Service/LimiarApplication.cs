@@ -16,7 +16,7 @@ namespace EcoAlert.Application.Service
 
         public LimiarEntity? DeletarDados(int id)
         {
-            throw new NotImplementedException();
+            return _limiarRepository.DeletarDados(id);
         }
 
         public LimiarEntity? EditarDados(int id, LimiarDto entity)

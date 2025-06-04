@@ -5,23 +5,22 @@ namespace EcoAlert.Application.Dtos
     public class LimiarDto
     {
         [Required(ErrorMessage = $"Campo {nameof(ParametroSensor)} é obrigatorio")]
-        [StringLength(150, MinimumLength = 5, ErrorMessage = "Campo deve ter no minimo 5 caracteres")]
-        public string ParametroSensor = string.Empty;
+        public string ParametroSensor { get; set; } = string.Empty;
 
         [Required(ErrorMessage = $"Campo {nameof(RecomendacaoAlerta)} é obrigatorio")]
-        public string RecomendacaoAlerta = string.Empty;
+        public string RecomendacaoAlerta { get; set; } = string.Empty;
         
         [Required(ErrorMessage = $"Campo {nameof(ValorMax)} é obrigatorio")]
-        public Double ValorMax;
+        public Double ValorMax { get; set; }
 
         [Required(ErrorMessage = $"Campo {nameof(ValorMin)} é obrigatorio")]
-        public Double ValorMin;
-        
+        public Double ValorMin { get; set; }
+
         [Required(ErrorMessage = $"Campo {nameof(MsgMax)} é obrigatorio")]
-        public string MsgMax = string.Empty;
+        public string MsgMax { get; set; } = string.Empty;
         
         [Required(ErrorMessage = $"Campo {nameof(MsgMin)} é obrigatorio")]
-        public string MsgMin = string.Empty;
+        public string MsgMin { get; set; } = string.Empty;
         
     }
 }

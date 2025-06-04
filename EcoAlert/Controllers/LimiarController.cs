@@ -1,6 +1,7 @@
 ﻿using EcoAlert.Application.Dtos;
 using EcoAlert.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EcoAlert.Controllers
 {
@@ -23,6 +24,8 @@ namespace EcoAlert.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.ParametrosSensor = ObterListaParametrosSensor();
+
             return View();
         }
 
@@ -43,6 +46,8 @@ namespace EcoAlert.Controllers
         public IActionResult Edit(int? id)
         {
             var limiar = _limiarApplication.ObterPorId(id ?? 0);
+
+            ViewBag.ParametrosSensor = ObterListaParametrosSensor();
 
             return View(limiar);
         }
@@ -82,6 +87,17 @@ namespace EcoAlert.Controllers
             }
 
             return View();
+        }
+
+        private IEnumerable<SelectListItem> ObterListaParametrosSensor()
+        {
+            return new List<SelectListItem>
+            {
+                new SelectListItem { Text = "Umidade", Value = "umidade" },
+                new SelectListItem { Text = "Temperatura", Value = "temperatura" },
+                new SelectListItem { Text = "Nivel Àgua(cm)", Value = "nivelagua" },
+                new SelectListItem { Text = "Porcentagem Nivel Àgua", Value = "porcentagemnivel" }
+            };
         }
 
     }

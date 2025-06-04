@@ -25,35 +25,42 @@ namespace EcoAlert.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("ID_LIMIAR");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("MsgMax")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
+                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnName("MSG_MAX");
 
                     b.Property<string>("MsgMin")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
+                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnName("MSG_MIN");
 
                     b.Property<string>("ParametroSensor")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
+                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnName("PARAMETRO_SENSOR");
 
                     b.Property<string>("RecomendacaoAlerta")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
+                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnName("RECOMENDACAO_ALERTA");
 
                     b.Property<double>("ValorMax")
-                        .HasColumnType("BINARY_DOUBLE");
+                        .HasColumnType("BINARY_DOUBLE")
+                        .HasColumnName("VALOR_MAX");
 
                     b.Property<double>("ValorMin")
-                        .HasColumnType("BINARY_DOUBLE");
+                        .HasColumnType("BINARY_DOUBLE")
+                        .HasColumnName("VALOR_MIN");
 
                     b.HasKey("Id");
 
-                    b.ToTable("tb_limiar_climatico");
+                    b.ToTable("TB_LIMIAR_CLIMATICO");
                 });
 #pragma warning restore 612, 618
         }
