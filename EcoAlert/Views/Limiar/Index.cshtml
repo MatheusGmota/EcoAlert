@@ -1,0 +1,60 @@
+﻿@model IEnumerable<EcoAlert.Domain.Entities.LimiarEntity>
+
+<p>
+    <a asp-action="Create">Adicionar</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ParametroSensor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecomendacaoAlerta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MsgMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MsgMin)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.ParametroSensor)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.RecomendacaoAlerta)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.ValorMax)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.ValorMin)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.MsgMax)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.MsgMin)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

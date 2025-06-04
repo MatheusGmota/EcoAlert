@@ -2,12 +2,13 @@ using EcoAlert.Application.Interfaces;
 using EcoAlert.Application.Service;
 using EcoAlert.Domain.Interfaces;
 using EcoAlert.Infrastructure.Data.AppData;
+using EcoAlert.Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ApplicationContext>(options => {
-    options.UseOracle(builder.Configuration.GetConnectionString("Oracle"));
+builder.Services.AddDbContext<ApplicationContext>(x => {
+    x.UseOracle(builder.Configuration.GetConnectionString("Oracle"));
 });
 
 builder.Services.AddTransient<ILimiarApplication, LimiarApplication>();

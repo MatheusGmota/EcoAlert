@@ -10,12 +10,12 @@ namespace EcoAlert.Domain.Entities
     public class LimiarEntity
     {
         [Key]
-        public int Id;
-        public string ParametroSensor = string.Empty;
-        public Double ValorMax;
-        public Double ValorMin;
-        public string MsgMax = string.Empty;
-        public string MsgMin = string.Empty;
-        public string RecomendacaoAlerta = string.Empty;
+        public int Id { get; set; }
+        public string ParametroSensor { get; set; }
+        public Double ValorMax { get; set; }
+        public Double ValorMin { get; set; }
+        public string MsgMax { get; set; }
+        public string MsgMin { get; set; }
+        public string RecomendacaoAlerta { get; set; }
     }
 }

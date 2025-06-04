@@ -8,7 +8,7 @@ namespace EcoAlert.Application.Interfaces
         IEnumerable<LimiarEntity>? ObterTodos();
         LimiarEntity? ObterPorId(int id);
         LimiarEntity? SalvarDados(LimiarDto entity);
-        LimiarEntity? EditarDados(LimiarDto entity);
+        LimiarEntity? EditarDados(int id, LimiarDto entity);
         LimiarEntity? DeletarDados(int id);
     }
 }
