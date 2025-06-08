@@ -11,8 +11,8 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace EcoAlert.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20250604224241_intitdb")]
-    partial class intitdb
+    [Migration("20250608214933_initdb")]
+    partial class initdb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

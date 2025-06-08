@@ -45,7 +45,7 @@ namespace EcoAlert.Infrastructure.Data.Repositories
                 throw new Exception("Não foi possivel salvar os dados limiares");
             }
 
-        }
+}
         public LimiarEntity? EditarDados(LimiarEntity entity)
         {
             try

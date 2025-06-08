@@ -2,17 +2,17 @@
 using EcoAlert.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using Swashbuckle.AspNetCore.Annotations; // Importante: Adicione este using
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace EcoAlert.Controllers.Api
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LimiarController : ControllerBase
+    public class LimiarApiController : ControllerBase
     {
         private readonly ILimiarApplication _service;
 
-        public LimiarController(ILimiarApplication service)
+        public LimiarApiController(ILimiarApplication service)
         {
             _service = service;
         }

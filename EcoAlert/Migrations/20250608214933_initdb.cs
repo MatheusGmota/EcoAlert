@@ -5,7 +5,7 @@
 namespace EcoAlert.Migrations
 {
     /// <inheritdoc />
-    public partial class intitdb : Migration
+    public partial class initdb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
