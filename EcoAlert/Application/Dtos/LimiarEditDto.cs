@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace EcoAlert.Application.Dtos
+﻿namespace EcoAlert.Application.Dtos
 {
     public class LimiarEditDto : LimiarDto
     {
