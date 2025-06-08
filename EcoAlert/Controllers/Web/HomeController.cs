@@ -2,7 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using EcoAlert.Models;
 
-namespace EcoAlert.Controllers;
+namespace EcoAlert.Controllers.Web;
 
 public class HomeController : Controller
 {
